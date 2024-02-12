@@ -35,6 +35,9 @@ color: #434455;
 .menu-link:focus {
     color: #404bbf;
 }
+.address-menu {
+    font-style: normal
+}
 .address-link {
     font-style: normal;
     font-weight: 400;
@@ -92,10 +95,12 @@ color: #434455;
     font-weight: 700;
         font-size: 36px;
         line-height: 1.11;
+        text-align: center;
         letter-spacing: 0.02em;
         text-transform: capitalize;
-        text-align: center
-        color: #2e2f42;}
+        color: #2e2f42;
+}
+    
 .team-item-class {
     background-color: #FFFFFF
 }
@@ -115,10 +120,11 @@ color: #434455;
     font-weight: 700;
         font-size: 36px;
         line-height: 1.11;
+        text-align: center;
         letter-spacing: 0.02em;
         text-transform: capitalize;
-        text-align: center;
         color: #2e2f42;
+    
 }
 .portfolio-item-name {
     font-weight: 500;
