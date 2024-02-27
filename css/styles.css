@@ -96,6 +96,7 @@ color: #434455;
 .menu-link:hover,
 .menu-link:focus {
     color: #404bbf;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contact-list {
     display: flex;
@@ -117,7 +118,7 @@ color: #434455;
     padding-top: 24px;
     padding-bottom: 24px;
     display: block;
-    transition: color cubic-bezier(0.4, 0, 0.2, 1); 
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 .contact-link:hover,
 .contact-link:focus {
@@ -127,10 +128,16 @@ color: #434455;
 /* =============/Page header styles========== */
 /* =============Hero section styles========== */
 .hero-section {
-    background: #2e2f42;
+    background-color: #2e2f42;
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/background-fon.jpg);
+    background-size: cover;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
     padding-top: 188px;
     padding-bottom: 188px;
 }
+
 .hero-section-title {
     max-width: 496px;
     font-weight: 700;
@@ -190,9 +197,7 @@ color: #434455;
     padding-top: 120px;
     padding-bottom: 120px;
 }
-.benefits-container {
-    display: flex;
-}
+
 .benefits-container-list {
     display: flex;
     gap: 24px;
@@ -237,6 +242,7 @@ color: #434455;
     padding-top: 120px;
     padding-bottom: 120px;
 }
+
 .team-title {
     font-weight: 700;
     font-size: 36px;
@@ -305,6 +311,7 @@ color: #434455;
 .socail-link:hover {
     fill: #f4f4fd;
     background-color: #404bbf;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* =============/Team section styles======== */
@@ -325,6 +332,11 @@ color: #434455;
     background: #fff;
     width: calc((100% - 48px) / 3);
 }
+.portfolio-item:hover {
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+    background: #fff;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 .portfolio-info-container {
     padding: 32px 16px;
     border: 1px solid #e7e9fc;
@@ -343,7 +355,6 @@ color: #434455;
     margin-bottom: 72px;
 }
 
-  
 .portfolio-item-name {
     font-weight: 500;
     font-size: 20px;
@@ -358,14 +369,43 @@ color: #434455;
     letter-spacing: 0.02em;
     color: #434455;
 }
+.text-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #f4f4fd;
+    background-color: #4d5ae5;
+    padding-top: 40px;
+    padding-right: 32px;
+    padding-left: 32px;
+}
+.portfolio-overlay {
+    position: relative;
+    overflow: hidden;
+}
+.portfolio-overlay:hover .text-overlay {
+    transform: translateY(0%);
+
+}
 /* ===============Page footer styles=========== */
 .page-footer {
     background: #2e2f42;
     padding-top: 100px;
     padding-bottom: 100px;
+    display: flex;
 }
 .page-footer-container {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
     margin-left: 156px;
     margin-right: 120px;
 }
@@ -398,10 +438,8 @@ color: #434455;
         max-width: 264px;    
 }
 .social-media-container {
-    display: inline-block;
-    justify-content: space-between;
-    align-items: center;
-
+    display: flex;
+    flex-direction: column;
 }
 
 .social-media-text {
