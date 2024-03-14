@@ -788,7 +788,7 @@ color: #434455;
   .page-footer-container {
     max-width: 1157px;
     display: flex;
-    gap: 24px;
+    /* gap: 24px; */
     align-items: flex-start;
     justify-content: space-between;
     flex-direction: row;
@@ -796,6 +796,7 @@ color: #434455;
     padding-left: 108px;
 
     }
+
 .footer-subscribe-form {
     display: flex;
     align-items: flex-start;
@@ -809,7 +810,7 @@ color: #434455;
     .social-media-container {
         display: flex;
         align-items: flex-start;
-        /* margin-right: auto; */
+        margin-right: auto;
     }
 
     .social-link-list-footer {
